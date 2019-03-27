@@ -1,15 +1,13 @@
 package com.qa.feedback_forms_consumer.persistence.repository;
 
-import java.util.Optional;
-
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-import com.qa.feedback_forms_accounts.persistence.domain.SentAccount;
+import com.qa.GatewayAPI.persistence.domain.Account;
 
 @Repository
-public interface MongoAccountRepo  extends MongoRepository<SentAccount, Long>{
+public interface MongoAccountRepo  extends MongoRepository<Account, Long>{
 	
-	SentAccount findTopByOrderByAccountIDDesc();
+	Account findTopByOrderByAccountIDDesc();
 	
 }
