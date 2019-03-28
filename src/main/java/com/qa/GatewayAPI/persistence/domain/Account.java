@@ -4,7 +4,7 @@ public class Account {
 
 	private Long accountID;
 	private Long cohortID;
-	private boolean admin;
+	private String type;
 	private String firstName;
 	private String lastName;
 	private String email;
@@ -15,10 +15,10 @@ public class Account {
 
 	}
 
-	public Account(Long cohortID, boolean admin, String firstName, String lastName, String email, String password,
+	public Account(Long cohortID, String type, String firstName, String lastName, String email, String password,
 			boolean flagged) {
 		this.cohortID = cohortID;
-		this.admin = admin;
+		this.type = type;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
@@ -42,12 +42,12 @@ public class Account {
 		this.cohortID = cohortID;
 	}
 
-	public boolean isAdmin() {
-		return admin;
+	public String getType() {
+		return type;
 	}
 
-	public void setAdmin(boolean admin) {
-		this.admin = admin;
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	public String getFirstName() {
