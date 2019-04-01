@@ -1,12 +1,11 @@
 package com.qa.gateway.persistence.domain;
 
-import java.util.List;
-
 public class FeedbackFormTrainer {
 	
 	private Long trainerFormID;
 	private Long trainerID;
 	private Long traineeID;
+	private int formCount;
 	private int[] scores;
 	private String[] answers;
 	private String commentsForTrainee;
@@ -18,8 +17,17 @@ public class FeedbackFormTrainer {
 	public FeedbackFormTrainer(Long trainerID, Long traineeID, int[] scores, String[] answers, String commentsForTrainee) {
 		this.traineeID = traineeID;
 		this.trainerID = trainerID;
+		this.scores = scores;
 		this.answers = answers;
 		this.commentsForTrainee = commentsForTrainee;
+	}
+
+	public int getFormCount() {
+		return formCount;
+	}
+
+	public void setFormCount(int formCount) {
+		this.formCount = formCount;
 	}
 
 	public Long getTrainerFormID() {
