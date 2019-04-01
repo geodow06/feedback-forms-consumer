@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
-import com.qa.GatewayAPI.persistence.domain.Account;
 import com.qa.feedback_forms_consumer.persistence.repository.MongoAccountRepo;
+import com.qa.gateway.persistence.domain.Account;
 
 @Component
 public class AccountReceiver {

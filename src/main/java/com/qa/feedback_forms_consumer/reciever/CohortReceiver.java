@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
-import com.qa.GatewayAPI.persistence.domain.Cohort;
 import com.qa.feedback_forms_consumer.persistence.repository.MongoCohortRepo;
+import com.qa.gateway.persistence.domain.Cohort;
 
 @Component
 public class CohortReceiver {

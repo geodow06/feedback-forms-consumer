@@ -1,4 +1,4 @@
-package com.qa.GatewayAPI.persistence.domain;
+package com.qa.gateway.persistence.domain;
 
 public class Account {
 

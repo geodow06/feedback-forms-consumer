@@ -1,21 +1,23 @@
-package com.qa.GatewayAPI.persistence.domain;
+package com.qa.gateway.persistence.domain;
 
+//@Entity
 public class Cohort {
-
+//	@Id
+//	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long cohortID;
 	private String cohortName;
 	private String trainerName;
-	private int week;
+	private int formCount;
 	private String cohortDescription;
 
 	public Cohort() {
 
 	}
 
-	public Cohort(String cohortName, String trainerName, int week, String cohortDescription) {
+	public Cohort(String cohortName, String trainerName, int formCount, String cohortDescription) {
 		this.cohortName = cohortName;
 		this.trainerName = trainerName;
-		this.week = week;
+		this.formCount = formCount;
 		this.cohortDescription = cohortDescription;
 	}
 
@@ -43,20 +45,20 @@ public class Cohort {
 		this.trainerName = trainerName;
 	}
 
-	public int getWeek() {
-		return week;
-	}
-
-	public void setWeek(int week) {
-		this.week = week;
-	}
-
 	public String getCohortDescription() {
 		return cohortDescription;
 	}
 
 	public void setCohortDescription(String cohortDescription) {
 		this.cohortDescription = cohortDescription;
+	}
+
+	public int getFormCount() {
+		return formCount;
+	}
+
+	public void setFormCount(int formCount) {
+		this.formCount = formCount;
 	}
 
 }
