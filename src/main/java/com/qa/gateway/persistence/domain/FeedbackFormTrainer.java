@@ -7,6 +7,7 @@ public class FeedbackFormTrainer {
 	private Long traineeID;
 	private int formCount;
 	private int[] scores;
+	private int averageScore;
 	private String[] answers;
 	private String commentsForTrainee;
 
@@ -20,6 +21,14 @@ public class FeedbackFormTrainer {
 		this.scores = scores;
 		this.answers = answers;
 		this.commentsForTrainee = commentsForTrainee;
+	}
+
+	public int getAverageScore() {
+		return averageScore;
+	}
+
+	public void setAverageScore(int averageScore) {
+		this.averageScore = averageScore;
 	}
 
 	public int getFormCount() {
