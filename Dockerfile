@@ -1,7 +1,6 @@
 FROM maven as build
 WORKDIR /build
 COPY pom.xml .
-RUN mvn verify --fail-never
 COPY . .
 RUN mvn clean package
 
