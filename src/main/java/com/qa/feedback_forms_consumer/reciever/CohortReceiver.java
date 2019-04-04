@@ -5,7 +5,7 @@ import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
 import com.qa.feedback_forms_consumer.persistence.repository.MongoCohortRepo;
-import com.qa.feedbackformscohorts.persistence.domain.SentCohort;
+import com.qa.gateway.persistence.domain.Cohort;
 
 @Component
 public class CohortReceiver {
@@ -14,14 +14,14 @@ public class CohortReceiver {
     private MongoCohortRepo repo;
     
     @JmsListener(destination = "CohortQueue", containerFactory = "myFactory")
-    public void receiveMessage(SentCohort sentCohort) {
+    public void receiveMessage(Cohort cohort) {
     	
 		if (repo.count() < 1) {
-	    	sentCohort.setCohortID( 1L);
+			cohort.setCohortID( 1L);
 		} else {
-			sentCohort.setCohortID(repo.findTopByOrderByCohortIDDesc().getCohortID() + 1);
+			cohort.setCohortID(repo.findTopByOrderByCohortIDDesc().getCohortID() + 1);
 		}
-		repo.save(sentCohort);
+		repo.save(cohort);
 	}
 
 }
